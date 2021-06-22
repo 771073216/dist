@@ -1,4 +1,4 @@
-name: release
+name: sync
 on:
   schedule:
     - cron: "0 0 * * *"
