@@ -22,7 +22,7 @@ jobs:
           v2rayng_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayNG/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           caddy_latest=$(wget -qO- "https://api.github.com/repos/caddyserver/caddy/releases/latest" | awk -F '"' '/tag_name/ {print $4}' | tr -d 'v')
           anxray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/AnXray/releases/latest" | awk -F '"' '/tag_name/ {print $4}')
-          xray_local=$(awk '/xray/ {print$2}' version)
+          xray_local=$(awk '/\<xray\>/ {print$2}' version)
           v2rayn_local=$(awk '/\<v2rayn\>/ {print$2}' version)
           v2rayng_local=$(awk '/v2rayng/ {print$2}' version)
           caddy_local=$(awk '/caddy/ {print$2}' version)
@@ -36,7 +36,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayn_latest}" == "${v2rayn_local}" ]; then
-          rm -f v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
+          rm v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN.zip -O v2rayn-v"$v2rayn_latest".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-Core.zip -O v2rayn-core-v"$v2rayn_latest".zip
           sed -i "s/v2rayn: $v2rayn_local/v2rayn: $v2rayn_latest/g" version
@@ -46,7 +46,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayng_latest}" == "${v2rayng_local}" ]; then
-          rm -f v2rayng-v"$v2rayng_local".apk
+          rm v2rayng-v"$v2rayng_local".apk
           wget -q --show-progress https://github.com/2dust/v2rayNG/releases/download/"$v2rayng_latest"/v2rayNG_"$v2rayng_latest"_arm64-v8a.apk -O v2rayng-v"$v2rayng_latest".apk
           sed -i "s/v2rayng: $v2rayng_local/v2rayng: $v2rayng_latest/g" version
           sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
@@ -62,8 +62,6 @@ jobs:
           if ! [ "${xray_latest}" == "${xray_local}" ]; then
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -O xray-linux.zip
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-64.zip -O xray-windows.zip
-          echo $xray_local
-          echo $xray_latest
           sed -i "s#xray: $xray_local#xray: $xray_latest#g" version
           xraycommit="xray: v${xray_local} -> v${xray_latest} "
           push=1
