@@ -31,7 +31,7 @@ jobs:
           rm anxray-"$anxray_local".apk
           wget -q --show-progress https://github.com/XTLS/AnXray/releases/latest/download/AX-"$anxray_latest"-arm64-v8a.apk -O anxray-"$anxray_latest".apk
           sed -i "s/anxray: $anxray_local/anxray: $anxray_latest/g" version
-          sed -i "s/anxray-$v2rayn_local.apk/anxray-$v2rayn_latest.apk/g" README.md
+          sed -i "s/anxray-$anxray_local.apk/anxray-$anxray_latest.apk/g" README.md
           anxraycommit="anxray: ${anxray_local} -> ${anxray_latest} "
           push=1
           fi
