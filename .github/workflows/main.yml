@@ -42,7 +42,7 @@ jobs:
           sed -i "s/v2rayn: $v2rayn_local/v2rayn: $v2rayn_latest/g" version
           sed -i "s/v2rayn-v$v2rayn_local.zip/v2rayn-v$v2rayn_latest.zip/g" README.md
           sed -i "s/v2rayn-core-v$v2rayn_local.zip/v2rayn-core-v$v2rayn_latest.zip/g" README.md
-          v2rayncommit="caddy: v${v2rayn_local} -> v${v2rayn_latest} "
+          v2rayncommit="v2rayn: v${v2rayn_local} -> v${v2rayn_latest} "
           push=1
           fi
           if ! [ "${v2rayng_latest}" == "${v2rayng_local}" ]; then
@@ -50,13 +50,13 @@ jobs:
           wget -q --show-progress https://github.com/2dust/v2rayNG/releases/download/"$v2rayng_latest"/v2rayNG_"$v2rayng_latest"_arm64-v8a.apk -O v2rayng-v"$v2rayng_latest".apk
           sed -i "s/v2rayng: $v2rayng_local/v2rayng: $v2rayng_latest/g" version
           sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
-          v2rayngcommit="xray: v${v2rayng_local} -> v${v2rayng_latest} "
+          v2rayngcommit="v2rayng: v${v2rayng_local} -> v${v2rayng_latest} "
           push=1
           fi
           if ! [ "${caddy_latest}" == "${caddy_local}" ]; then
           wget -q --show-progress https://github.com/caddyserver/caddy/releases/latest/download/caddy_"$caddy_latest"_linux_amd64.deb -O caddy.deb
           sed -i "s/caddy: $caddy_local/caddy: $caddy_latest/g" version
-          caddycommit="caddy: v${caddy_local} -> v${caddy_latest}"
+          caddycommit="caddy: v${caddy_local} -> v${caddy_latest} "
           push=1
           fi
           if ! [ "${xray_latest}" == "${xray_local}" ]; then
