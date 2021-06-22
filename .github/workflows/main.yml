@@ -62,7 +62,7 @@ jobs:
           if ! [ "${xray_latest}" == "${xray_local}" ]; then
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -O xray-linux.zip
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-64.zip -O xray-windows.zip
-          sed -i "s/xray: $xray_local/xray: $xray_latest/g" version
+          #sed -i "s/xray: $xray_local/xray: $xray_latest/g" version
           xraycommit="xray: v${xray_local} -> v${xray_latest} "
           push=1
           fi
