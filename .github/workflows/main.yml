@@ -46,7 +46,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayng_latest}" == "${v2rayng_local}" ]; then
-          rm v2rayng-v"$v2rayng_local".apk
+          rm -f v2rayng-v"$v2rayng_local".apk
           wget -q --show-progress https://github.com/2dust/v2rayNG/releases/download/"$v2rayng_latest"/v2rayNG_"$v2rayng_latest"_arm64-v8a.apk -O v2rayng-v"$v2rayng_latest".apk
           sed -i "s/v2rayng: $v2rayng_local/v2rayng: $v2rayng_latest/g" version
           sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
