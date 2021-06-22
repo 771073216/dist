@@ -63,7 +63,7 @@ jobs:
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -O xray-linux.zip
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-64.zip -O xray-windows.zip
           echo "0"
-          sed -i "s/xray: $xray_local/xray: $xray_latest/g" version
+          sed -i "s#xray: $xray_local#xray: $xray_latest#g" version
           echo "1"
           xraycommit="xray: v${xray_local} -> v${xray_latest} "
           push=1
