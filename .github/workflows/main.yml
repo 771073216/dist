@@ -17,11 +17,11 @@ jobs:
       - name: Check and release
         run: |
           push=0
-          xray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/Xray-core/releases/latest" | awk -F '"' '/tag_name/ {print $4}' | tr -d 'v')
-          v2rayn_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayN/releases/latest" | awk -F '"' '/tag_name/ {print $4}')
+          xray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/Xray-core/tags" | awk -F '"' '/name/ {print $4}' | head -n 1 | tr -d 'v')
+          v2rayn_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayN/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           v2rayng_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayNG/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
-          caddy_latest=$(wget -qO- "https://api.github.com/repos/caddyserver/caddy/releases/latest" | awk -F '"' '/tag_name/ {print $4}' | tr -d 'v')
-          anxray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/AnXray/releases/latest" | awk -F '"' '/tag_name/ {print $4}')
+          caddy_latest=$(wget -qO- "https://api.github.com/repos/caddyserver/caddy/tags" | awk -F '"' '/name/ {print $4}' | head -n 1 | tr -d 'v')
+          anxray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/AnXray/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           xray_local=$(awk '/\<xray\>/ {print$2}' version)
           v2rayn_local=$(awk '/\<v2rayn\>/ {print$2}' version)
           v2rayng_local=$(awk '/v2rayng/ {print$2}' version)
