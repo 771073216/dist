@@ -35,7 +35,7 @@ jobs:
           sed -i "s/anxray: $anxray_local/anxray: $anxray_latest/g" version
           sed -i "s/anxray-$anxray_local.apk/anxray-$anxray_latest.apk/g" README.md
           git add .
-          git commit -am "anxray: ${anxray_local} -> ${anxray_latest} "
+          git commit -am "anxray: ${anxray_local} -> ${anxray_latest}"
           push=1
           fi
           if ! [ "${v2rayn_latest}" == "${v2rayn_local}" ]; then
@@ -46,7 +46,7 @@ jobs:
           sed -i "s/v2rayn-v$v2rayn_local.zip/v2rayn-v$v2rayn_latest.zip/g" README.md
           sed -i "s/v2rayn-core-v$v2rayn_local.zip/v2rayn-core-v$v2rayn_latest.zip/g" README.md
           git add .
-          git commit -am "v2rayn: v${v2rayn_local} -> v${v2rayn_latest} "
+          git commit -am "v2rayn: v${v2rayn_local} -> v${v2rayn_latest}"
           push=1
           fi
           if ! [ "${v2rayng_latest}" == "${v2rayng_local}" ]; then
@@ -55,14 +55,14 @@ jobs:
           sed -i "s/v2rayng: $v2rayng_local/v2rayng: $v2rayng_latest/g" version
           sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
           git add .
-          git commit -am "v2rayng: v${v2rayng_local} -> v${v2rayng_latest} "
+          git commit -am "v2rayng: v${v2rayng_local} -> v${v2rayng_latest}"
           push=1
           fi
           if ! [ "${caddy_latest}" == "${caddy_local}" ]; then
           wget -q --show-progress https://github.com/caddyserver/caddy/releases/latest/download/caddy_"$caddy_latest"_linux_amd64.deb -O linux/caddy.deb
           sed -i "s/caddy: $caddy_local/caddy: $caddy_latest/g" version
           git add .
-          git commit -am "caddy: v${caddy_local} -> v${caddy_latest} "
+          git commit -am "caddy: v${caddy_local} -> v${caddy_latest}"
           push=1
           fi
           if ! [ "${xray_latest}" == "${xray_local}" ]; then
@@ -70,7 +70,7 @@ jobs:
           wget -q --show-progress https://github.com/XTLS/Xray-core/releases/latest/download/Xray-windows-64.zip -O windows/xray-windows.zip
           sed -i "s#xray: $xray_local#xray: $xray_latest#g" version
           git add .
-          git commit -am "xray: v${xray_local} -> v${xray_latest} "
+          git commit -am "xray: v${xray_local} -> v${xray_latest}"
           push=1
           fi
           if [ "$push" -eq 1 ]; then
