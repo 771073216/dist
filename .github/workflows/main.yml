@@ -24,13 +24,13 @@ jobs:
           v2rayng_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayNG/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           caddy_latest=$(wget -qO- "https://api.github.com/repos/caddyserver/caddy/tags" | awk -F '"' '/name/ {print $4}' | head -n 1 | tr -d 'v')
           anxray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/AnXray/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
-          sagernet_latest=$(wget -qO- "https://api.github.com/repos/SagerNet/SagerNet/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
+          #sagernet_latest=$(wget -qO- "https://api.github.com/repos/SagerNet/SagerNet/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           xray_local=$(awk '/\<xray\>/ {print$2}' version)
           v2rayn_local=$(awk '/\<v2rayn\>/ {print$2}' version)
           v2rayng_local=$(awk '/v2rayng/ {print$2}' version)
           caddy_local=$(awk '/caddy/ {print$2}' version)
           anxray_local=$(awk '/anxray/ {print$2}' version)
-          sagernet_local=$(awk '/sagernet/ {print$2}' version)
+          #sagernet_local=$(awk '/sagernet/ {print$2}' version)
           if ! [ "${anxray_latest}" == "${anxray_local}" ]; then
           rm anxray-"$anxray_local".apk
           wget -q --show-progress https://github.com/XTLS/AnXray/releases/latest/download/AX-"$anxray_latest"-arm64-v8a.apk -O android/anxray-"$anxray_latest".apk
@@ -40,15 +40,15 @@ jobs:
           git commit -am "anxray: ${anxray_local} -> ${anxray_latest}"
           push=1
           fi
-          if ! [ "${sagernet_latest}" == "${sagernet_local}" ]; then
+          #if ! [ "${sagernet_latest}" == "${sagernet_local}" ]; then
           #rm sagernet-"$sagernet_local".apk
-          wget -q --show-progress https://github.com/SagerNet/SagerNet/releases/latest/download/SN-"$sagernet_latest"-arm64-v8a.apk -O android/sagernet-"$sagernet_latest".apk
+          #wget -q --show-progress https://github.com/SagerNet/SagerNet/releases/latest/download/SN-"$sagernet_latest"-arm64-v8a.apk -O android/sagernet-"$sagernet_latest".apk
           #sed -i "s/sagernet: $sagernet_local/sagernet: $sagernet_latest/g" version
           #sed -i "s/sagernet-$sagernet_local.apk/sagernet-$sagernet_latest.apk/g" README.md
-          git add .
-          git commit -am "sagernet: ${sagernet_local} -> ${sagernet_latest}"
-          push=1
-          fi
+          #git add .
+          #git commit -am "sagernet: ${sagernet_local} -> ${sagernet_latest}"
+          #push=1
+          #fi
           if ! [ "${v2rayn_latest}" == "${v2rayn_local}" ]; then
           rm v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN.zip -O windows/v2rayn-v"$v2rayn_latest".zip
