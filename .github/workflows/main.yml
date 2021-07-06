@@ -17,10 +17,6 @@ jobs:
       - name: Check and release
         run: |
           push=0
-          mkdir android windows linux
-          mv v2rayn-v4.19.zip v2rayn-core-v4.19.zip xray-windows.zip windows/
-          mv v2rayng-v1.6.15.apk anxray-0.1-rc02.apk android/
-          mv xray-linux.zip caddy.deb linux/
           xray_latest=$(wget -qO- "https://api.github.com/repos/XTLS/Xray-core/tags" | awk -F '"' '/name/ {print $4}' | head -n 1 | tr -d 'v')
           v2rayn_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayN/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
           v2rayng_latest=$(wget -qO- "https://api.github.com/repos/2dust/v2rayNG/tags" | awk -F '"' '/name/ {print $4}' | head -n 1)
@@ -70,11 +66,10 @@ jobs:
           xraycommit="xray: v${xray_local} -> v${xray_latest} "
           push=1
           fi
-          #if [ "$push" -eq 1 ]; then
+          if [ "$push" -eq 1 ]; then
           git add .
           git config user.name "771073216"
           git config user.email "771073216@qq.com"
-          git commit -m "sort" -a
-          #git commit -m "${caddycommit}${xraycommit}${v2rayncommit}${v2rayngcommit}${anxraycommit}" -a
+          git commit -m "${caddycommit}${xraycommit}${v2rayncommit}${v2rayngcommit}${anxraycommit}" -a
           git push
-          #fi
+          fi
