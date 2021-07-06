@@ -43,8 +43,8 @@ jobs:
           if ! [ "${sagernet_latest}" == "${sagernet_local}" ]; then
           #rm sagernet-"$sagernet_local".apk
           wget -q --show-progress https://github.com/SagerNet/SagerNet/releases/latest/download/SN-"$sagernet_latest"-arm64-v8a.apk -O android/sagernet-"$sagernet_latest".apk
-          sed -i "s/sagernet: $sagernet_local/sagernet: $sagernet_latest/g" version
-          sed -i "s/sagernet-$sagernet_local.apk/sagernet-$sagernet_latest.apk/g" README.md
+          #sed -i "s/sagernet: $sagernet_local/sagernet: $sagernet_latest/g" version
+          #sed -i "s/sagernet-$sagernet_local.apk/sagernet-$sagernet_latest.apk/g" README.md
           git add .
           git commit -am "sagernet: ${sagernet_local} -> ${sagernet_latest}"
           push=1
