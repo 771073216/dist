@@ -70,10 +70,11 @@ jobs:
           xraycommit="xray: v${xray_local} -> v${xray_latest} "
           push=1
           fi
-          if [ "$push" -eq 1 ]; then
+          #if [ "$push" -eq 1 ]; then
           git add .
           git config user.name "771073216"
           git config user.email "771073216@qq.com"
-          git commit -m "${caddycommit}${xraycommit}${v2rayncommit}${v2rayngcommit}${anxraycommit}" -a
+          git commit -m "sort" -a
+          #git commit -m "${caddycommit}${xraycommit}${v2rayncommit}${v2rayngcommit}${anxraycommit}" -a
           git push
-          fi
+          #fi
