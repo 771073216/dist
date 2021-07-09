@@ -1,7 +1,7 @@
 # dist
 - **windows**
-  - **v2rayn**: [v2rayn-v4.19.zip](https://cdn.jsdelivr.net/gh/771073216/dist@main/windows/v2rayn-v4.19.zip)
-  - **v2rayn-core**: [v2rayn-core-v4.19.zip](https://cdn.jsdelivr.net/gh/771073216/dist@main/windows/v2rayn-core-v4.19.zip)
+  - **v2rayn**: [v2rayn-v4.20.zip](https://cdn.jsdelivr.net/gh/771073216/dist@main/windows/v2rayn-v4.20.zip)
+  - **v2rayn-core**: [v2rayn-core-v4.20.zip](https://cdn.jsdelivr.net/gh/771073216/dist@main/windows/v2rayn-core-v4.20.zip)
   - **xray-core**: [xray-windows.zip](https://cdn.jsdelivr.net/gh/771073216/dist@main/windows/xray-windows.zip)
 
 - **android**
