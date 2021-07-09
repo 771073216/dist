@@ -32,7 +32,7 @@ jobs:
           anxray_local=$(awk '/anxray/ {print$2}' version)
           sagernet_local=$(awk '/sagernet/ {print$2}' version)
           if ! [ "${anxray_latest}" == "${anxray_local}" ]; then
-          rm anxray-"$anxray_local".apk
+          rm android/anxray-"$anxray_local".apk
           wget -q --show-progress https://github.com/XTLS/AnXray/releases/latest/download/AX-"$anxray_latest"-arm64-v8a.apk -O android/anxray-"$anxray_latest".apk
           sed -i "s/anxray: $anxray_local/anxray: $anxray_latest/g" version
           sed -i "s/anxray-$anxray_local.apk/anxray-$anxray_latest.apk/g" README.md
@@ -41,7 +41,7 @@ jobs:
           push=1
           fi
           if ! [ "${sagernet_latest}" == "${sagernet_local}" ]; then
-          #rm sagernet-"$sagernet_local".apk
+          rm android/sagernet-"$sagernet_local".apk
           wget -q --show-progress https://github.com/SagerNet/SagerNet/releases/latest/download/SN-"$sagernet_latest"-arm64-v8a.apk -O android/sagernet-"$sagernet_latest".apk
           sed -i "s/sagernet: $sagernet_local/sagernet: $sagernet_latest/g" version
           sed -i "s/sagernet-$sagernet_local.apk/sagernet-$sagernet_latest.apk/g" README.md
@@ -50,7 +50,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayn_latest}" == "${v2rayn_local}" ]; then
-          rm v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
+          rm windows/v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN.zip -O windows/v2rayn-v"$v2rayn_latest".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-Core.zip -O windows/v2rayn-core-v"$v2rayn_latest".zip
           sed -i "s/v2rayn: $v2rayn_local/v2rayn: $v2rayn_latest/g" version
@@ -61,7 +61,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayng_latest}" == "${v2rayng_local}" ]; then
-          rm v2rayng-v"$v2rayng_local".apk
+          rm android/v2rayng-v"$v2rayng_local".apk
           wget -q --show-progress https://github.com/2dust/v2rayNG/releases/download/"$v2rayng_latest"/v2rayNG_"$v2rayng_latest"_arm64-v8a.apk -O android/v2rayng-v"$v2rayng_latest".apk
           sed -i "s/v2rayng: $v2rayng_local/v2rayng: $v2rayng_latest/g" version
           sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
