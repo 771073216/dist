@@ -50,7 +50,7 @@ jobs:
           push=1
           fi
           if ! [ "${v2rayn_latest}" == "${v2rayn_local}" ]; then
-          rm windows/v2rayn-v"$v2rayn_local".zip v2rayn-core-v"$v2rayn_local".zip
+          rm windows/v2rayn-v"$v2rayn_local".zip windows/v2rayn-core-v"$v2rayn_local".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN.zip -O windows/v2rayn-v"$v2rayn_latest".zip
           wget -q --show-progress https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-Core.zip -O windows/v2rayn-core-v"$v2rayn_latest".zip
           sed -i "s/v2rayn: $v2rayn_local/v2rayn: $v2rayn_latest/g" version
