@@ -22,13 +22,12 @@ v2rayng: $v2rayng_latest
 caddy: $caddy_latest
 EOF
   list=$(diff version v2 | grep '>' | tr -d ' >')
+  mv v2 version
   [[ -z $list ]] && echo "no update" && exit 0
   for file in $list; do
     name=$(echo "$file" | awk -F':' '{print$1}')
     "${name}"_update
   done
-  rm version
-  mv v2 version
   git push
 }
 
