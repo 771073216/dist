@@ -6,7 +6,7 @@
 
 - **android**
   - **v2rayng**: [v2rayng-v1.6.15.apk](https://cdn.jsdelivr.net/gh/771073216/dist@main/android/v2rayng-v1.6.15.apk)
-  - **anxray**: [anxray-0.1-rc05.apk](https://cdn.jsdelivr.net/gh/771073216/dist@main/android/anxray-0.1-rc05.apk)
+  - **anxray**: [anxray-0.1-rc06.apk](https://cdn.jsdelivr.net/gh/771073216/dist@main/android/anxray-0.1-rc06.apk)
   - **sagernet**: [sagernet-0.2-rc06.apk](https://cdn.jsdelivr.net/gh/771073216/dist@main/android/sagernet-0.2-rc06.apk)
 
 - **linux**
