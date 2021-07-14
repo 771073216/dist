@@ -41,7 +41,7 @@ xray_update() {
 }
 
 caddy_update() {
-  echo "Downloading caddy_'$caddy_latest'_linux_amd64.deb..."
+  echo "Downloading caddy_${caddy_latest}_linux_amd64.deb..."
   wget -q https://github.com/caddyserver/caddy/releases/latest/download/caddy_"$caddy_latest"_linux_amd64.deb -O linux/caddy.deb || exit 1
   git add .
   git commit -am "caddy: v${caddy_local} -> v${caddy_latest}"
@@ -61,7 +61,7 @@ v2rayn_update() {
 
 v2rayng_update() {
   rm android/v2rayng-v"$v2rayng_local".apk
-  echo "Downloading v2rayNG_'$v2rayng_latest'_arm64-v8a.apk..."
+  echo "Downloading v2rayNG_${v2rayng_latest}_arm64-v8a.apk..."
   wget -q https://github.com/2dust/v2rayNG/releases/download/"$v2rayng_latest"/v2rayNG_"$v2rayng_latest"_arm64-v8a.apk -O android/v2rayng-v"$v2rayng_latest".apk || exit 1
   sed -i "s/v2rayng-v$v2rayng_local.apk/v2rayng-v$v2rayng_latest.apk/g" README.md
   git add .
@@ -70,7 +70,7 @@ v2rayng_update() {
 
 anxray_update() {
   rm android/anxray-"$anxray_local".apk
-  echo "Downloading AX-'$anxray_latest'-arm64-v8a.apk..."
+  echo "Downloading AX-${anxray_latest}-arm64-v8a.apk..."
   wget -q https://github.com/XTLS/AnXray/releases/latest/download/AX-"$anxray_latest"-arm64-v8a.apk -O android/anxray-"$anxray_latest".apk || exit 1
   sed -i "s/anxray-$anxray_local.apk/anxray-$anxray_latest.apk/g" README.md
   git add .
