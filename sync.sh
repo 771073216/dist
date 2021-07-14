@@ -27,6 +27,7 @@ EOF
     name=$(echo "$file" | awk -F':' '{print$1}')
     "${name}"_update
   done
+  rm version
   mv v2 version
   git push
 }
