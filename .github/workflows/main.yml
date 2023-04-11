@@ -1,0 +1,17 @@
+name: sync
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  watch:
+      types: started
+jobs:
+  build:
+    name: Sync
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout out project files
+        uses: actions/checkout@v3
+
+      - name: Check and release
+        run: |
+          python3 main.py "${{ secrets.GITHUB_TOKEN }}"

@@ -1,0 +1,49 @@
+- name: xray
+  repo: XTLS/Xray-core
+  version: 1.7.5
+  filename:
+  - path_name: Xray-windows-64.zip
+    full_name: xray-core
+    os: windows
+  - path_name: xray-linux.zip
+    download_name: Xray-linux-64.zip
+    full_name: xray-core
+    os: linux
+- name: v2rayn
+  repo: 2dust/v2rayN
+  version: 6.21
+  filename:
+  - path_name: v2rayN.zip
+    full_name: v2rayn
+    os: windows
+- name: v2rayng
+  repo: 2dust/v2rayNG
+  version: 1.7.38
+  filename:
+  - path_name: v2rayNG_%s_arm64-v8a.apk
+    full_name: v2rayng
+    os: android
+- name: mosdns
+  repo: IrineSistiana/mosdns
+  version: 5.1.3
+  filename:
+  - path_name: mosdns-linux-arm64.zip
+    full_name: mosdns(arm64)
+    os: linux
+  - path_name: mosdns-linux-amd64.zip
+    full_name: mosdns(amd64)
+    os: linux
+- name: cfa
+  repo: Kr328/ClashForAndroid
+  version: 2.5.12
+  filename:
+  - path_name: cfa-%s-premium-arm64-v8a-release.apk
+    full_name: ClashForAndroid
+    os: android
+- name: clashn
+  repo: 2dust/clashN
+  version: 2.15
+  filename:
+  - path_name: clashN.zip
+    full_name: clashN
+    os: windows
