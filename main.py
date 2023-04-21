@@ -71,7 +71,6 @@ def main(m):
         return
     commit_title = repo.split('/')[1]
     commit = '"%s: v%s -> v%s "' % (commit_title, local_version, version)
-    os.system('''cat version.json | tr -d '",{}' | grep -v "^$" > version''')
     os.system('git config --local user.name "github-actions[bot]"')
     os.system('git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"')
     os.system('git add .')
