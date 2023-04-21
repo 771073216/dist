@@ -21,10 +21,6 @@ def add_readme():
         for n in filename:
             os_type = n.get('os')
             path_name = get_name(n.get('path_name'), version)
-            name_str = os.path.splitext(path_name)[0]
-            for files in os.listdir(os_type):
-                if name_str + "." in files:
-                    path_name = files
             full_name = n.get('full_name')
             url = cdn + 'https://github.com/' + repo + '/releases/latest/download/' + path_name
             if os_type == 'windows':
