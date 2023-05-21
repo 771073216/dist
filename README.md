@@ -8,5 +8,5 @@
   - **mosdns(arm64)**: [mosdns-linux-arm64.zip](https://api.azzb.club/https://github.com/IrineSistiana/mosdns/releases/latest/download/mosdns-linux-arm64.zip)
   - **mosdns(amd64)**: [mosdns-linux-amd64.zip](https://api.azzb.club/https://github.com/IrineSistiana/mosdns/releases/latest/download/mosdns-linux-amd64.zip)
 - **android**
-  - **v2rayng**: [v2rayNG_1.7.38_arm64-v8a.apk](https://api.azzb.club/https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.7.38_arm64-v8a.apk)
+  - **v2rayng**: [v2rayNG_1.8.5_arm64-v8a.apk](https://api.azzb.club/https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.5_arm64-v8a.apk)
   - **ClashForAndroid**: [cfa-2.5.12-premium-arm64-v8a-release.apk](https://api.azzb.club/https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk)
