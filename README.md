@@ -10,3 +10,4 @@
 - **android**
   - **v2rayng**: [v2rayNG_1.8.5_arm64-v8a.apk](https://api.azzb.club/https://github.com/2dust/v2rayNG/releases/latest/download/v2rayNG_1.8.5_arm64-v8a.apk)
   - **ClashForAndroid**: [cfa-2.5.12-premium-arm64-v8a-release.apk](https://api.azzb.club/https://github.com/Kr328/ClashForAndroid/releases/latest/download/cfa-2.5.12-premium-arm64-v8a-release.apk)
+  - **Pure Live**: [pure_live_1.1.0_android.apk](https://api.azzb.club/https://github.com/Jackiu1997/pure_live/releases/latest/download/pure_live_1.1.0_android.apk)
