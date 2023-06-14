@@ -31,7 +31,7 @@
     os: linux
 - name: cmfa
   repo: MetaCubeX/ClashMetaForAndroid
-  version: 0
+  version: 2.8.6
   filename:
   - path_name: cmfa-%s-meta-arm64-v8a-release.apk
     full_name: Clash Meta for Android
