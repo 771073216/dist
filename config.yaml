@@ -50,6 +50,6 @@
   repo: Jackiu1997/pure_live
   version: 1.1.0
   filename:
-  - path_name: pure_live_%s_android.apk
+  - path_name: pure_live_v%s_android.apk
     full_name: Pure Live
     os: android
