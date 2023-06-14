@@ -6,7 +6,6 @@
     full_name: xray-core
     os: windows
   - path_name: xray-linux.zip
-    download_name: Xray-linux-64.zip
     full_name: xray-core
     os: linux
 - name: v2rayn
@@ -47,3 +46,10 @@
   - path_name: clashN.zip
     full_name: clashN
     os: windows
+- name: pure_live
+  repo: Jackiu1997/pure_live
+  version: 0
+  filename:
+  - path_name: pure_live_%s_android.apk
+    full_name: Pure Live
+    os: android
