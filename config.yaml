@@ -29,12 +29,12 @@
   - path_name: mosdns-linux-amd64.zip
     full_name: mosdns(amd64)
     os: linux
-- name: cfa
-  repo: Kr328/ClashForAndroid
-  version: 2.5.12
+- name: cmfa
+  repo: MetaCubeX/ClashMetaForAndroid
+  version: 0
   filename:
-  - path_name: cfa-%s-premium-arm64-v8a-release.apk
-    full_name: ClashForAndroid
+  - path_name: cmfa-%s-meta-arm64-v8a-release.apk
+    full_name: Clash Meta for Android
     os: android
 - name: clashn
   repo: 2dust/clashN
