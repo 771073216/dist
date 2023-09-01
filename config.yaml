@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.7.5
+  version: 1.8.4
   filename:
   - path_name: Xray-windows-64.zip
     full_name: xray-core
