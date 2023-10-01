@@ -14,6 +14,7 @@ commit = ""
 
 
 def add_readme():
+    print("add_readme")
     android_readme = []
     windows_readme = []
     linux_readme = []
@@ -45,12 +46,14 @@ def add_readme():
 
 
 def get_name(name, version):
+    print("get_name")
     if name.count('%') == 1:
         name = name % version
     return name
 
 
 def check_version(repo, local_version, m):
+    print("check_version")
     global commit, update_flag
     headers = {'Accept': 'application/vnd.github.v3+json',
                'Content-Type': 'application/json',
@@ -65,7 +68,7 @@ def check_version(repo, local_version, m):
         yaml_write = open('config.yaml', "w", encoding="utf-8")
         yaml.safe_dump(conf, yaml_write, sort_keys=False)
         commit_title = repo.split('/')[1]
-        commit += '"%s: v%s -> v%s"\n' % (commit_title, local_version, remote_version)
+        commit += '%s: v%s -> v%s\n' % (commit_title, local_version, remote_version)
         update_flag = True
 
 
