@@ -14,9 +14,7 @@ commit = ""
 
 
 def add_readme():
-    android_readme = []
-    windows_readme = []
-    linux_readme = []
+    linux_readme = android_readme = windows_readme = ""
     for k in conf:
         filename = k['filename']
         version = str(k['version'])
@@ -27,20 +25,16 @@ def add_readme():
             full_name = n.get('full_name')
             url = cdn + 'https://github.com/' + repo + '/releases/latest/download/' + path_name
             if os_type == 'windows':
-                windows_readme.append('  - **%s**: [%s](%s)\n' % (full_name, path_name, url))
+                windows_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
             elif os_type == 'linux':
-                linux_readme.append('  - **%s**: [%s](%s)\n' % (full_name, path_name, url))
+                linux_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
             elif os_type == 'android':
-                android_readme.append('  - **%s**: [%s](%s)\n' % (full_name, path_name, url))
+                android_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
             else:
                 print('readme err :', full_name, os_type)
     file_handle = open('README.md', mode='w')
-    file_handle.write("# dist\n- **windows**\n")
-    file_handle.writelines(windows_readme)
-    file_handle.write("- **linux**\n")
-    file_handle.writelines(linux_readme)
-    file_handle.write("- **android**\n")
-    file_handle.writelines(android_readme)
+    file_handle.write("# dist\n- **windows**\n%s\n- **linux**\n%s\n- **android**\n%s" %
+                      (windows_readme, linux_readme, android_readme))
     file_handle.close()
 
 
