@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.8.4
+  version: 1.8.3
   filename:
   - path_name: Xray-windows-64.zip
     full_name: xray-core
@@ -10,7 +10,7 @@
     os: linux
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.23'
+  version: '6.22'
   filename:
   - path_name: v2rayN.zip
     full_name: v2rayn
