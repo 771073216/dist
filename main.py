@@ -57,6 +57,7 @@ def check_version(repo, local_version, m):
                'authorization': 'Bearer ' + sys.argv[1]}
     gh_api = requests.get('https://api.github.com/repos/' + repo + '/releases/latest', headers=headers).text
     remote_version = str(json.loads(gh_api)['tag_name']).replace('v', '')
+    print(remote_version,local_version)
     if remote_version == local_version:
         return
     else:
