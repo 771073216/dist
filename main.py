@@ -77,6 +77,7 @@ if __name__ == "__main__":
 
     if update_flag:
         add_readme()
+        print('gh release create new --title "%s" --notes "%s"' % ("update", commit.rstrip('\n')))
         os.system('git config --local user.name "github-actions[bot]"')
         os.system('git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"')
         os.system('git add .')
