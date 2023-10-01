@@ -45,7 +45,7 @@
     os: windows
 - name: pure_live
   repo: Jackiu1997/pure_live
-  version: 1.1.0
+  version: 1.0.0
   filename:
   - path_name: pure_live_v%s_android.apk
     full_name: Pure Live
