@@ -2,8 +2,6 @@ name: sync
 on:
   schedule:
     - cron: "0 0 * * *"
-  watch:
-      types: started
   workflow_dispatch:
 jobs:
   build:
