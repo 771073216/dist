@@ -1,3 +1,4 @@
+import datetime
 import json
 import os
 import sys
@@ -8,6 +9,8 @@ import yaml
 conf_file = open('config.yaml', "r", encoding='utf-8')
 conf = yaml.safe_load(conf_file)
 cdn = 'https://api.azzb.club/'
+update_flag = False
+commit = ""
 
 
 def add_readme():
@@ -48,36 +51,37 @@ def get_name(name, version):
 
 
 def check_version(repo, local_version, m):
+    global commit, update_flag
     headers = {'Accept': 'application/vnd.github.v3+json',
                'Content-Type': 'application/json',
                'authorization': 'Bearer ' + sys.argv[1]}
     gh_api = requests.get('https://api.github.com/repos/' + repo + '/releases/latest', headers=headers).text
     remote_version = str(json.loads(gh_api)['tag_name']).replace('v', '')
     if remote_version == local_version:
-        return local_version, 0
+        return
     else:
         m['version'] = remote_version
         yaml_write = open('config.yaml', "w", encoding="utf-8")
         yaml.safe_dump(conf, yaml_write, sort_keys=False)
-        add_readme()
-        return remote_version, 1
-
-
-def main(m):
-    repo = m['repo']
-    local_version = str(m['version'])
-    (version, update_code) = check_version(repo, local_version, m)
-    if update_code == 0:
-        return
-    commit_title = repo.split('/')[1]
-    commit = '"%s: v%s -> v%s "' % (commit_title, local_version, version)
-    os.system('git config --local user.name "github-actions[bot]"')
-    os.system('git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"')
-    os.system('git add .')
-    os.system('git commit -am ' + commit.rstrip(' '))
-    os.system('git push')
+        commit_title = repo.split('/')[1]
+        commit += '"%s: v%s -> v%s"\n' % (commit_title, local_version, remote_version)
+        update_flag = True
 
 
 if __name__ == "__main__":
     for i in conf:
-        main(i)
+        cur_repo = i['repo']
+        cur_local_version = str(i['version'])
+        check_version(cur_repo, cur_local_version, i)
+
+    if update_flag:
+        add_readme()
+        os.system('git config --local user.name "github-actions[bot]"')
+        os.system('git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"')
+        os.system('git add .')
+        os.system('git commit -am "%s"' % (datetime.date.today().strftime('%Y%m%d')))
+        os.system('git push')
+        os.system('gh release delete new --cleanup-tag -y')
+        os.system('gh release create tmp')
+        os.system('gh release create new --title "%s" --notes "%s"' % ("update", commit.rstrip('\n')))
+        os.system('gh release delete tmp --cleanup-tag -y')
