@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout out project files
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Check and release
+        env:
+           GH_TOKEN: ${{ github.token }}
         run: |
           python3 main.py "${{ secrets.GITHUB_TOKEN }}"
