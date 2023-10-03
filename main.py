@@ -11,27 +11,38 @@ conf = yaml.safe_load(conf_file)
 cdn = 'https://api.azzb.club/'
 update_flag = False
 commit = ""
+linux_readme = android_readme = windows_readme = ""
+cur_repo = ""
+cur_version = ""
+cur_filename = []
+
+
+def get_conf(m):
+    global cur_repo, cur_version, cur_filename
+    cur_repo = m['repo']
+    cur_version = m['version']
+    cur_filename = m['filename']
+
+
+def gen_readme(version):
+    global linux_readme, android_readme, windows_readme
+    for n in cur_filename:
+        os_type = n.get('os')
+        path_name = get_name(n.get('path_name'), version)
+        full_name = n.get('full_name')
+        url = cdn + 'https://github.com/' + cur_repo + '/releases/latest/download/' + path_name
+        if os_type == 'windows':
+            windows_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
+        elif os_type == 'linux':
+            linux_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
+        elif os_type == 'android':
+            android_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
+        else:
+            print('readme err :', full_name, os_type)
 
 
 def add_readme():
-    linux_readme = android_readme = windows_readme = ""
-    for k in conf:
-        filename = k['filename']
-        version = str(k['version'])
-        repo = k['repo']
-        for n in filename:
-            os_type = n.get('os')
-            path_name = get_name(n.get('path_name'), version)
-            full_name = n.get('full_name')
-            url = cdn + 'https://github.com/' + repo + '/releases/latest/download/' + path_name
-            if os_type == 'windows':
-                windows_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
-            elif os_type == 'linux':
-                linux_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
-            elif os_type == 'android':
-                android_readme += '\t- **%s**: [%s](%s)\n' % (full_name, path_name, url)
-            else:
-                print('readme err :', full_name, os_type)
+    global linux_readme, android_readme, windows_readme
     file_handle = open('README.md', mode='w')
     file_handle.write("# dist\n- **windows**\n%s\n- **linux**\n%s\n- **android**\n%s" %
                       (windows_readme, linux_readme, android_readme))
@@ -39,35 +50,34 @@ def add_readme():
 
 
 def get_name(name, version):
-    if name.count('%') == 1:
+    if name.count('%s'):
         name = name % version
     return name
 
 
-def check_version(repo, local_version, m):
+def check_version(m):
     global commit, update_flag
     headers = {'Accept': 'application/vnd.github.v3+json',
                'Content-Type': 'application/json',
                'authorization': 'Bearer ' + sys.argv[1]}
-    gh_api = requests.get('https://api.github.com/repos/' + repo + '/releases/latest', headers=headers).text
+    gh_api = requests.get('https://api.github.com/repos/' + cur_repo + '/releases/latest', headers=headers).text
     remote_version = str(json.loads(gh_api)['tag_name']).replace('v', '')
-    if remote_version == local_version:
-        return
+    if remote_version == cur_version:
+        gen_readme(cur_version)
     else:
+        gen_readme(remote_version)
         m['version'] = remote_version
         yaml_write = open('config.yaml', "w", encoding="utf-8")
         yaml.safe_dump(conf, yaml_write, sort_keys=False)
-        commit_title = repo.split('/')[1]
-        commit += '**%s**: v%s -> v%s\n' % (commit_title, local_version, remote_version)
+        commit_title = cur_repo.split('/')[1]
+        commit += '**%s**: v%s -> v%s\n' % (commit_title, cur_version, remote_version)
         update_flag = True
 
 
 if __name__ == "__main__":
     for i in conf:
-        cur_repo = i['repo']
-        cur_local_version = str(i['version'])
-        check_version(cur_repo, cur_local_version, i)
-
+        get_conf(i)
+        check_version(i)
     if update_flag:
         add_readme()
         os.system('git config --local user.name "github-actions[bot]"')
