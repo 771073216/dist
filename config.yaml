@@ -10,14 +10,14 @@
     os: linux
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.23'
+  version: '6.31'
   filename:
   - path_name: v2rayN.zip
     full_name: v2rayn
     os: windows
 - name: v2rayng
   repo: 2dust/v2rayNG
-  version: 1.8.5
+  version: 1.8.12
   filename:
   - path_name: v2rayNG_%s_arm64-v8a.apk
     full_name: v2rayng
