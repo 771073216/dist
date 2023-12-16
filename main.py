@@ -87,5 +87,5 @@ if __name__ == "__main__":
         os.system('git push')
         os.system('gh release delete new --cleanup-tag -y')
         os.system('gh release create tmp')
-        os.system('gh release create new --title "%s" --notes "%s"' % ("update", commit.rstrip('\n')))
+        os.system('gh release create new --latest --title "%s" --notes "%s"' % ("update", commit.rstrip('\n')))
         os.system('gh release delete tmp --cleanup-tag -y')
