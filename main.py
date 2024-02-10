@@ -8,7 +8,7 @@ import yaml
 
 conf_file = open('config.yaml', "r", encoding='utf-8')
 conf = yaml.safe_load(conf_file)
-cdn = 'https://api.azzb.club/'
+cdn = 'https://api.iristory.top/'
 update_flag = False
 commit = ""
 linux_readme = android_readme = windows_readme = ""
