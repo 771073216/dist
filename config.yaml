@@ -10,7 +10,7 @@
     os: linux
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.42'
+  version: '6.43'
   filename:
   - path_name: v2rayN.zip
     full_name: v2rayn
