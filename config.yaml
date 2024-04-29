@@ -38,7 +38,7 @@
     os: android
 - name: clashn
   repo: 2dust/clashN
-  version: '2.21'
+  version: '2.22'
   filename:
   - path_name: clashN.zip
     full_name: clashN
