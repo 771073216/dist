@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.8.11
+  version: 1.8.13
   filename:
   - path_name: Xray-windows-64.zip
     full_name: xray-core
