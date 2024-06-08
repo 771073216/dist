@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.8.13
+  version: 0
   white_list:
   - - linux-64
   - - linux-arm64
@@ -11,34 +11,28 @@
   version: '6.45'
   white_list:
   - - v2rayN.zip
-  black_list: null
 - name: v2rayng
   repo: 2dust/v2rayNG
   version: 1.8.22
   white_list:
   - - arm64-v8a
-  black_list: null
 - name: mosdns
   repo: IrineSistiana/mosdns
   version: 5.3.1
   white_list:
   - - linux-amd64
-  black_list: null
 - name: cmfa
   repo: MetaCubeX/ClashMetaForAndroid
   version: 2.10.1
   white_list:
   - - arm64-v8a
-  black_list: null
 - name: clashn
   repo: 2dust/clashN
   version: '2.22'
   white_list:
   - - clashN.zip
-  black_list: null
 - name: pure_live
   repo: Jackiu1997/pure_live
   version: 1.1.0
   white_list:
   - - android
-  black_list: null
