@@ -1,52 +1,44 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.8.13
-  filename:
-  - path_name: Xray-windows-64.zip
-    full_name: xray-core
-    os: windows
-  - path_name: xray-linux.zip
-    full_name: xray-core
-    os: linux
+  version: 0
+  white_list:
+    - ["linux-64"]
+    - ["linux-arm64"]
+  black_list:
+    - "dgst"
 - name: v2rayn
   repo: 2dust/v2rayN
   version: '6.45'
-  filename:
-  - path_name: v2rayN.zip
-    full_name: v2rayn
-    os: windows
+  white_list:
+    - ["v2rayN.zip"]
+  black_list:
 - name: v2rayng
   repo: 2dust/v2rayNG
   version: 1.8.22
-  filename:
-  - path_name: v2rayNG_%s_arm64-v8a.apk
-    full_name: v2rayng
-    os: android
+  white_list:
+    - ["arm64-v8a"]
+  black_list:
 - name: mosdns
   repo: IrineSistiana/mosdns
   version: 5.3.1
-  filename:
-  - path_name: mosdns-linux-amd64.zip
-    full_name: mosdns(amd64)
-    os: linux
+  white_list:
+    - ["linux-amd64"]
+  black_list:
 - name: cmfa
   repo: MetaCubeX/ClashMetaForAndroid
   version: 2.10.1
-  filename:
-  - path_name: cmfa-%s-meta-arm64-v8a-release.apk
-    full_name: Clash Meta for Android
-    os: android
+  white_list:
+    - ["arm64-v8a"]
+  black_list:
 - name: clashn
   repo: 2dust/clashN
   version: '2.22'
-  filename:
-  - path_name: clashN.zip
-    full_name: clashN
-    os: windows
+  white_list:
+    - ["clashN.zip"]
+  black_list:
 - name: pure_live
   repo: Jackiu1997/pure_live
   version: 1.1.0
-  filename:
-  - path_name: pure_live_v%s_android.apk
-    full_name: Pure Live
-    os: android
+  white_list:
+    - ["android"]
+  black_list:
