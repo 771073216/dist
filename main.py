@@ -15,16 +15,18 @@ commit = ""
 
 
 def check_name(name, black_list, white_list):
-    for black_string in black_list:
-        if black_string in name:
-            return None
-    for white_group in white_list:
-        hit_count = 0
-        for k in white_group:
-            if k in name:
-                hit_count += 1
-        if len(white_group) == hit_count:
-            return name
+    if black_list is not None:
+        for black_string in black_list:
+            if black_string in name:
+                return None
+    if white_list is not None:
+        for white_group in white_list:
+            hit_count = 0
+            for k in white_group:
+                if k in name:
+                    hit_count += 1
+            if len(white_group) == hit_count:
+                return name
 
 
 def check_version(m):
