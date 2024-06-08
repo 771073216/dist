@@ -37,8 +37,12 @@ def check_version(m):
     repo = m["repo"]
     version = m["version"]
     name = m['name']
-    black_list = m["black_list"]
-    white_list = m["white_list"]
+    white_list = None
+    black_list = None
+    if "white_list" in m:
+        white_list = m["white_list"]
+    if "black_list" in m:
+        black_list = m["black_list"]
     gh_api = requests.get('https://api.github.com/repos/' + repo + '/releases/latest', headers=headers).text
     remote_version = str(json.loads(gh_api)['tag_name']).replace('v', '')
     assets = json.loads(gh_api)['assets']
