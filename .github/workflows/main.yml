@@ -15,4 +15,5 @@ jobs:
         env:
            GH_TOKEN: ${{ github.token }}
         run: |
+          pip list
           python3 main.py "${{ secrets.GITHUB_TOKEN }}"
