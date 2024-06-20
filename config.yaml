@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 1.8.15
+  version: 1.8.13
   white_list:
   - - linux-64
   - - linux-arm64
@@ -13,7 +13,7 @@
   - - v2rayN.zip
 - name: v2rayng
   repo: 2dust/v2rayNG
-  version: 1.8.22
+  version: 1.8.25
   white_list:
   - - arm64-v8a
 - name: mosdns
