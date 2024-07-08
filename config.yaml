@@ -8,7 +8,7 @@
   - dgst
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.45'
+  version: '6.50'
   white_list:
   - - v2rayN.zip
 - name: v2rayng

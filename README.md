@@ -3,7 +3,7 @@
 	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.16/Xray-linux-64.zip)
 	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.16/Xray-linux-arm64-v8a.zip)
 - **v2rayn**
-	- [v2rayN.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/6.45/v2rayN.zip)
+	- [v2rayN.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/6.50/v2rayN.zip)
 - **v2rayng**
 	- [v2rayNG_1.8.25_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.25/v2rayNG_1.8.25_arm64-v8a.apk)
 - **mosdns**
