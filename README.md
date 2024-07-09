@@ -5,7 +5,7 @@
 - **v2rayn**
 	- [v2rayN.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/6.50/v2rayN.zip)
 - **v2rayng**
-	- [v2rayNG_1.8.25_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.25/v2rayNG_1.8.25_arm64-v8a.apk)
+	- [v2rayNG_1.8.28_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.28/v2rayNG_1.8.28_arm64-v8a.apk)
 - **mosdns**
 	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.1/mosdns-linux-amd64.zip)
 - **cmfa**

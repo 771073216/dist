@@ -13,7 +13,7 @@
   - - v2rayN.zip
 - name: v2rayng
   repo: 2dust/v2rayNG
-  version: 1.8.25
+  version: 1.8.28
   white_list:
   - - arm64-v8a
 - name: mosdns
