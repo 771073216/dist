@@ -1,7 +1,7 @@
 # dist
 - **xray**
-	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.18/Xray-linux-64.zip)
-	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.18/Xray-linux-arm64-v8a.zip)
+	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.19/Xray-linux-64.zip)
+	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.19/Xray-linux-arm64-v8a.zip)
 - **v2rayn**
 	- [v2rayN.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/6.51/v2rayN.zip)
 - **v2rayng**
