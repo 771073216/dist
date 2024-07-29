@@ -8,7 +8,7 @@
   - dgst
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.51'
+  version: '6.53'
   white_list:
   - - v2rayN.zip
 - name: v2rayng
@@ -23,7 +23,7 @@
   - - linux-amd64
 - name: cmfa
   repo: MetaCubeX/ClashMetaForAndroid
-  version: 2.10.1
+  version: 2.10.2
   white_list:
   - - arm64-v8a
 - name: clashn
