@@ -18,7 +18,7 @@
   - - arm64-v8a
 - name: mosdns
   repo: IrineSistiana/mosdns
-  version: 5.3.1
+  version: 5.3.3
   white_list:
   - - linux-amd64
 - name: cmfa

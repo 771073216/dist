@@ -7,7 +7,7 @@
 - **v2rayng**
 	- [v2rayNG_1.8.35_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.35/v2rayNG_1.8.35_arm64-v8a.apk)
 - **mosdns**
-	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.1/mosdns-linux-amd64.zip)
+	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.3/mosdns-linux-amd64.zip)
 - **cmfa**
 	- [cmfa-2.10.2-meta-arm64-v8a-release.apk](https://api.iristory.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.10.2/cmfa-2.10.2-meta-arm64-v8a-release.apk)
 - **clashn**
