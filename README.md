@@ -1,11 +1,11 @@
 # dist
 - **xray**
-	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.23/Xray-linux-64.zip)
-	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.23/Xray-linux-arm64-v8a.zip)
+	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-linux-64.zip)
+	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v1.8.24/Xray-linux-arm64-v8a.zip)
 - **v2rayn**
 	- [v2rayN.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/6.55/v2rayN.zip)
 - **v2rayng**
-	- [v2rayNG_1.8.35_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.35/v2rayNG_1.8.35_arm64-v8a.apk)
+	- [v2rayNG_1.8.38_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.8.38/v2rayNG_1.8.38_arm64-v8a.apk)
 - **mosdns**
 	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.3/mosdns-linux-amd64.zip)
 - **cmfa**
