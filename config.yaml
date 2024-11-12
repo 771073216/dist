@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 24.11.5
+  version: 24.11.11
   white_list:
   - - linux-64
   - - linux-arm64
@@ -8,7 +8,7 @@
   - dgst
 - name: v2rayn
   repo: 2dust/v2rayN
-  version: '6.60'
+  version: 7.0.9
   white_list:
   - - v2rayN.zip
 - name: v2rayng
