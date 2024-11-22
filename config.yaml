@@ -1,6 +1,6 @@
 - name: xray
   repo: XTLS/Xray-core
-  version: 24.11.11
+  version: 24.11.21
   white_list:
   - - linux-64
   - - linux-arm64
