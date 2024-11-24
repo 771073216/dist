@@ -10,7 +10,7 @@
   repo: 2dust/v2rayN
   version: 7.1.3
   white_list:
-  - - v2rayN.zip
+  - - v2rayN-windows-64.zip
 - name: v2rayng
   repo: 2dust/v2rayNG
   version: 1.9.16
