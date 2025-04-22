@@ -3,13 +3,13 @@
 	- [Xray-linux-64.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v25.3.6/Xray-linux-64.zip)
 	- [Xray-linux-arm64-v8a.zip](https://api.iristory.top/https://github.com/XTLS/Xray-core/releases/download/v25.3.6/Xray-linux-arm64-v8a.zip)
 - **v2rayn**
-	- [v2rayN-windows-64.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/7.10.5/v2rayN-windows-64.zip)
+	- [v2rayN-windows-64.zip](https://api.iristory.top/https://github.com/2dust/v2rayN/releases/download/7.11.2/v2rayN-windows-64.zip)
 - **v2rayng**
 	- [v2rayNG_1.9.46_arm64-v8a.apk](https://api.iristory.top/https://github.com/2dust/v2rayNG/releases/download/1.9.46/v2rayNG_1.9.46_arm64-v8a.apk)
 - **mosdns**
 	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.3/mosdns-linux-amd64.zip)
 - **cmfa**
-	- [cmfa-2.11.8-meta-arm64-v8a-release.apk](https://api.iristory.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.8/cmfa-2.11.8-meta-arm64-v8a-release.apk)
+	- [cmfa-2.11.9-meta-arm64-v8a-release.apk](https://api.iristory.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.9/cmfa-2.11.9-meta-arm64-v8a-release.apk)
 - **clashn**
 	- [clashN.zip](https://api.iristory.top/https://github.com/2dust/clashN/releases/download/2.22/clashN.zip)
 - **pure_live**
