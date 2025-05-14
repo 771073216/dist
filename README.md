@@ -9,7 +9,7 @@
 - **mosdns**
 	- [mosdns-linux-amd64.zip](https://api.iristory.top/https://github.com/IrineSistiana/mosdns/releases/download/v5.3.3/mosdns-linux-amd64.zip)
 - **cmfa**
-	- [cmfa-2.11.10-meta-arm64-v8a-release.apk](https://api.iristory.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/2.11.10/cmfa-2.11.10-meta-arm64-v8a-release.apk)
+	- [cmfa-2.11.11-meta-arm64-v8a-release.apk](https://api.iristory.top/https://github.com/MetaCubeX/ClashMetaForAndroid/releases/download/v2.11.11/cmfa-2.11.11-meta-arm64-v8a-release.apk)
 - **clashn**
 	- [clashN.zip](https://api.iristory.top/https://github.com/2dust/clashN/releases/download/2.22/clashN.zip)
 - **pure_live**
