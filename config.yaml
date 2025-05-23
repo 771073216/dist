@@ -23,7 +23,7 @@
   - - linux-amd64
 - name: cmfa
   repo: MetaCubeX/ClashMetaForAndroid
-  version: 2.11.11
+  version: 2.11.12
   white_list:
   - - arm64-v8a
 - name: clashn
