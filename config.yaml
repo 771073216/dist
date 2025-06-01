@@ -21,18 +21,3 @@
   version: 5.3.3
   white_list:
   - - linux-amd64
-- name: cmfa
-  repo: MetaCubeX/ClashMetaForAndroid
-  version: 2.11.13
-  white_list:
-  - - arm64-v8a
-- name: clashn
-  repo: 2dust/clashN
-  version: '2.22'
-  white_list:
-  - - clashN.zip
-- name: pure_live
-  repo: Jackiu1997/pure_live
-  version: 1.1.0
-  white_list:
-  - - android
